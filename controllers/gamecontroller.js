@@ -9,7 +9,7 @@ router.get('/all', (req, res) => {
         .then(
             function findSuccess(data) {
                 res.status(200).json({
-                    games: games,
+                    games: data,
                     message: "Data fetched."
                 })
             },
