@@ -1,9 +1,9 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 require('dotenv').config();
-var db = require('./db');
-var user = require('./controllers/usercontroller');
-var game = require('./controllers/gamecontroller')
+const db = require('./db');
+const user = require('./controllers/usercontroller');
+const game = require('./controllers/gamecontroller')
 
 
 db.sync();
