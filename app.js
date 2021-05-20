@@ -6,7 +6,9 @@ const user = require('./controllers/usercontroller');
 const game = require('./controllers/gamecontroller')
 
 
-db.sync();
+db.sync()
+  .then(() => console.log('Models synchronization with db successfully'))
+  .catch((err) => console.log(`db.sync error: ${err}`));
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
