@@ -6,14 +6,8 @@ const sequelize = new Sequelize(process.env.DB, process.env.DB_USER, process.env
     dialect: 'postgres'
 })
 
-sequelize.authenticate().then(
-    function success() {
-        console.log("Connected to DB");
-    },
-
-    function fail(err) {
-        console.log(`Error: ${err}`);
-    }
-)
+sequelize.authenticate()
+  .then(() => console.log("Connected to DB"))
+  .catch(err => console.log(`Error: ${err}`));
 
 module.exports = sequelize;
