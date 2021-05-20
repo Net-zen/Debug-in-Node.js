@@ -16,4 +16,4 @@ app.use(require('./middleware/validate-session'))
 app.use('/api/game', game);
 app.listen(process.env.PORT, function() {
     console.log(`App is listening on ${process.env.PORT}`);
-})
+});
