@@ -5,7 +5,7 @@ const sequelize = require('../db');
 const User = require('../models/user')(sequelize, DataTypes);
 
 module.exports = function (req, res, next) {
-    if (req.method == 'OPTIONS') {
+    if (req.method === 'OPTIONS') {
         next();   // allowing options as a method for request
     } else {
         const sessionToken = req.headers.authorization;
